@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcf8f8;
+}
+
+header {
+    background-color: #0b5ac2;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    text-align: center;
+    position: relative;
+}
+
+.font-resize {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.font-resize button {
+    background-color: #fff;
+    border: 2px solid #0b5ac2;
+    border-radius: 3px;
+    color: #0b5ac2;
+    cursor: pointer;
+    padding: 3px 7px;
+    font-size: 14px;
+    width: 40px; /* Largura fixa para os botões */
+    max-width: 100%; /* Evita que os botões excedam a largura do container */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.font-resize button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.filter-section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#color-filter {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #0b5ac2;
+    background-color: #fff;
+    color: #0b5ac2;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    background-color: white;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    flex: 1 1 500px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.book p {
+    text-align: justify;
+}
+
+.book h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: #0b5ac2;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.filter-image.achromatomaly {
+    filter: grayscale(100%);
+}
+
+.filter-image.deuteranomaly {
+    filter: hue-rotate(180deg);
+}
+
+.filter-image.tritanomaly {
+    filter: sepia(100%) saturate(300%) hue-rotate(-50deg);
+}
+
+.filter-image.acromatomia {
+    filter: grayscale(50%);
+}
+
+.filter-image.deuteranopia {
+    filter: grayscale(75%) sepia(100%) hue-rotate(45deg);
+}
+
+.filter-image.protanopia {
+    filter: sepia(35%) saturate(100%);
+}
